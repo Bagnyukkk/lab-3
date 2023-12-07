@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab3_OOP.EditPage">
+    
+    <ScrollView>
+        <StackLayout Padding="50" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+            <Grid 
+                Margin="0,0,0,50"
+                RowSpacing="40"
+                ColumnSpacing="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <Label Text="Назва:"  Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="nameInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="1">
+                    <Label Text="Ім'я автора:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="authorNameInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="2">
+                    <Label Text="Факультет:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="facultyInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="0">
+                    <Label Text="Кафедра:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="departInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1">
+                    <Label Text="Лабараторія:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="labInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="2">
+                    <Label Text="Посада автора:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="posInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="0">
+                    <Label Text="Початок перебування на посаді автора:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="startOnInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="1">
+                    <Label Text="Кінець перебування на посаді автора:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="lastOnInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="2">
+                    <Label Text="Назва замовника:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="custNameInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="3" Grid.Column="0">
+                    <Label Text="Адреса замовника:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="custAdrInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="3" Grid.Column="1">
+                    <Label Text="Підпорядкування замовника:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="submInput" 
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+                <StackLayout Grid.Row="3" Grid.Column="2">
+                    <Label Text="Галузь:" HorizontalOptions="Start" Margin="0,0,0,10" FontSize="12"/>
+                    <Entry 
+                        x:Name="branchInput"  
+                        FontSize="12"
+                        BackgroundColor="LightBlue"
+                        PlaceholderColor="Black"
+                        HeightRequest="5" />
+                </StackLayout>
+            </Grid>
+            <FlexLayout Direction="Row" HorizontalOptions="Center" JustifyContent="Start" AlignItems="Center">
+                <Button 
+                    Text="Зберегти" 
+                    Clicked="SaveButtonClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Margin="0, 0, 10, 0" 
+                    FontSize="13"
+                    FlexLayout.AlignSelf="Start"
+                    MaximumHeightRequest="50" 
+                    BorderColor="ForestGreen"/>
+                <Button 
+                    Text="Назад" 
+                    Clicked="ReturnButtonClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="13"
+                    FlexLayout.AlignSelf="Start"
+                    MaximumHeightRequest="50" 
+                    BorderColor="ForestGreen"/>
+            </FlexLayout>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
